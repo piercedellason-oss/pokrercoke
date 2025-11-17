@@ -1,0 +1,125 @@
+/* ===========================
+   GLOBAL BODY STYLING
+   =========================== */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+    /* Full-screen background image */
+    background: url('https://t4.ftcdn.net/jpg/03/25/38/41/360_F_325384191_sg1D5lYWfRedGQsBm8xIHnsSAUUUVxGE.jpg')
+        no-repeat center center/cover;
+
+    color: white;
+    min-height: 100vh;
+
+    /* Greatly improves text readability */
+    text-shadow: 0 2px 8px rgba(0,0,0,0.8);
+}
+
+/* ===========================
+   PAGE WRAPPER
+   (Each \"page\" overlays the background)
+   =========================== */
+.page {
+    display: none;
+    padding: 30px;
+    text-align: center;
+
+    /* Dark overlay + background image layered together */
+    background: 
+        rgba(0, 0, 0, 0.55),
+        url('https://t4.ftcdn.net/jpg/03/25/38/41/360_F_325384191_sg1D5lYWfRedGQsBm8xIHnsSAUUUVxGE.jpg')
+        no-repeat center center/cover;
+
+    min-height: 100vh;
+
+    /* Smooth fade attached to each page */
+    backdrop-filter: blur(2px);
+}
+
+/* Visible page */
+.visible {
+    display: block;
+}
+
+/* Fade transition animation */
+.fade {
+    animation: fadein 0.5s ease-in-out;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* ===========================
+   TITLES & TEXT
+   =========================== */
+.title {
+    font-size: 3rem;
+    margin-top: 80px;
+    font-weight: bold;
+}
+
+h2, h3 {
+    margin-top: 40px;
+}
+
+/* ===========================
+   BUTTONS
+   =========================== */
+.main-buttons button,
+.return {
+    padding: 12px 30px;
+    margin: 20px 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.9);
+    color: black;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.main-buttons button:hover,
+.return:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: scale(1.05);
+}
+
+/* Return button spacing */
+.return {
+    margin-top: 40px;
+}
+
+/* ===========================
+   COMBINATION LIST
+   =========================== */
+.combo-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.combo-list li {
+    padding: 12px;
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.combo-list li:hover {
+    text-decoration: underline;
+    transform: translateX(3px);
+}
+
+/* ===========================
+   COMBINATION TEXT
+   =========================== */
+.combo-text {
+    margin-top: 30px;
+    font-size: 20px;
+    padding: 0 20px;
+    line-height: 1.5;
+}

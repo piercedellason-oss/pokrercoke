@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Sets character encoding -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Mobile responsiveness -->
+    <title>Poker Guide</title>
+    <link rel="stylesheet" href="poker.css"> <!-- Link to external CSS -->
+</head>
+<body>
+
+    <!-- =============================== -->
+    <!-- MAIN PAGE -->
+    <!-- =============================== -->
+    <section id="main" class="page visible fade">
+        <h1 class="title">Poker Card Game</h1> <!-- Main page title -->
+
+        <div class="main-buttons">
+            <!-- Navigation buttons -->
+            <button onclick="showPage('about')">About</button>
+            <button onclick="showPage('combinations')">Combinations</button>
+        </div>
+    </section>
+
+    <!-- =============================== -->
+    <!-- ABOUT PAGE -->
+    <!-- =============================== -->
+    <section id="about" class="page fade">
+        <h2>About Poker</h2>
+
+        <!-- General explanation -->
+        <p>Poker is a strategic card game involving betting, bluffing, and hand rankings.
+        Players compete to win chips by having the best hand or by convincing others to fold (kinda like bluffing).</p>
+
+        <h3>Basic Rules:</h3>
+        <ul>
+            <li>Each player gets cards.</li>
+            <li>Players place bets based on how strong they believe their hand is.</li>
+            <li>Players can fold, call, or raise.</li>
+            <li>The highest hand at the end wins the pot.</li>
+        </ul>
+
+        <!-- Return to main page -->
+        <button class="return" onclick="showPage('main')">Return</button>
+    </section>
+
+    <!-- =============================== -->
+    <!-- COMBINATIONS PAGE -->
+    <!-- =============================== -->
+    <section id="combinations" class="page fade">
+        <h2>Poker Combinations</h2>
+
+        <!-- List of poker hand names -->
+        <ul class="combo-list">
+            <li onclick="showCombo('Royal Flush')">Royal Flush</li>
+            <li onclick="showCombo('Straight Flush')">Straight Flush</li>
+            <li onclick="showCombo('Four of a Kind')">Four of a Kind</li>
+            <li onclick="showCombo('Full House')">Full House</li>
+            <li onclick="showCombo('Flush')">Flush</li>
+            <li onclick="showCombo('Straight')">Straight</li>
+            <li onclick="showCombo('Three of a Kind')">Three of a Kind</li>
+            <li onclick="showCombo('Two Pair')">Two Pair</li>
+            <li onclick="showCombo('One Pair')">One Pair</li>
+            <li onclick="showCombo('High Card')">High Card</li>
+        </ul>
+
+        <!-- Display area for the selected combination -->
+        <div id="comboText" class="combo-text">Click a combination to see the description.</div>
+
+        <!-- Return to main page -->
+        <button class="return" onclick="showPage('main')">Return</button>
+    </section>
+
+    <!-- JavaScript file -->
+    <script src="poker.js"></script>
+</body>
+</html>
